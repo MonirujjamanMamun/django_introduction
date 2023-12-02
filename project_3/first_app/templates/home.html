@@ -1,0 +1,27 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Document</title>
+  </head>
+  <body>
+    <h1>This is First app home page.</h1>
+    <h3>Name :{{author}}</h3>
+    <h3>Age :{{age}}</h3>
+    <h3>Books :{{books}}</h3>
+
+    {% if age >= 20%}
+    <h4>You will get driving licencs and your age is {{age}}</h4>
+    {%elif age >= 10 and age <= 19%}
+    <h4>You will not get driving licencs and your age is {{age}}</h4>
+    {% else %}
+    <h4>You'ar a child and your age is {{age}}</h4>
+    {% endif %}
+
+
+    {% for i in courses %}
+        <h1>{{i.id}} {{i.name}} {{i.fee}}</h>
+    {% endfor %}
+  </body>
+</html>
